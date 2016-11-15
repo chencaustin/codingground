@@ -53,6 +53,8 @@ int main()
     listA.printNumber();
     listB.printNumber();
     
+    LinkedList listC;
+    
     /*
     // STEP 2: Build a list of three song nodes by appending to end of list.
     LinkedList myList;
