@@ -55,6 +55,9 @@ public:
     // Prints list data to the console.
     void printList();
     
+    // See numbers list
+    void printNumber();
+    
     // Destructor de-allocates memory used by the list.
     ~LinkedList();
 };
