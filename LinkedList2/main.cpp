@@ -12,30 +12,33 @@ using namespace std;
 
 int main()
 {
+    //2.5 Sum Lists:
+    /*
+        You have two numbers represented by a linked list, where each node contains 
+        a single digit. The digits are stored in reverse order, such that the 1 's 
+        digit is at the head of the list. Write a function that adds the two numbers 
+        and returns the sum as a linked list.
+    */
+    
+    
     // STEP 1: Create some unlinked song nodes.
-    node * A = new node;
-    A -> song = "We Are";
-    A -> artist = "Vertical Horizon";
+    node * A = new node;    A -> song = "We Are";    A -> artist = "Vertical Horizon";
+    A->number = 7;
     
-    node * B = new node;
-    B -> song = "I Stand Alone";
-    B -> artist = "Godsmack";
+    node * B = new node;    B -> song = "I Stand Alone";    B -> artist = "Godsmack";
+    B->number = 1;
     
-    node * C = new node;
-    C -> song = "Heir Apparent";
-    C -> artist = "Opeth";
+    node * C = new node;    C -> song = "Heir Apparent";    C -> artist = "Opeth";
+    C->number = 6;
     
-    node * D = new node;
-    D -> song = "Fear of the Dark";
-    D -> artist = "Iron Maiden";
+    node * D = new node;    D -> song = "Fear of the Dark";    D -> artist = "Iron Maiden";
+    D->number = 5;
     
-    node * E = new node;
-    E -> song = "Blue Monday";
-    E -> artist = "New Order";
+    node * E = new node;    E -> song = "Blue Monday";    E -> artist = "New Order";
+    E->number = 9;
     
-    node * F = new node;
-    F -> song = "The Moth";
-    F -> artist = "Aimee Mann";
+    node * F = new node;    F -> song = "The Moth";    F -> artist = "Aimee Mann";
+    F->number = 2;
     
     // STEP 2: Build a list of three song nodes by appending to end of list.
     LinkedList myList;
