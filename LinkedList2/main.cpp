@@ -40,6 +40,20 @@ int main()
     node * F = new node;    F -> song = "The Moth";    F -> artist = "Aimee Mann";
     F->number = 2;
     
+    LinkedList listA;
+    listA.insertNode(A, 1);
+    listA.insertNode(B, 2);
+    listA.insertNode(C, 3);
+    
+    LinkedList listB;
+    listB.insertNode(D, 1);
+    listB.insertNode(E, 2);
+    listB.insertNode(F, 3);
+    
+    listA.printNumber();
+    listB.printNumber();
+    
+    /*
     // STEP 2: Build a list of three song nodes by appending to end of list.
     LinkedList myList;
     myList.insertNode(A, 1);
@@ -67,6 +81,7 @@ int main()
     // STEP 7: Remove a node from the middle of the list.
     myList.removeNode(3);
     myList.printList();
+    */
     
     return 0;
 }
