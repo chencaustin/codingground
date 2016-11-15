@@ -59,7 +59,7 @@ public:
     void printNumber();
     
     // Add together list
-    bool addNumber(LinkedList a,LinkedList b);
+    bool addNumber(LinkedList a, LinkedList b, LinkedList &c);
     
     // Destructor de-allocates memory used by the list.
     ~LinkedList();
