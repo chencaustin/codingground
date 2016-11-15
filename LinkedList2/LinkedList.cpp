@@ -161,6 +161,13 @@ void LinkedList::printNumber(){
     cout << "\n";
 }
 
+// Add together list
+bool LinkedList::addNumber(LinkedList a,LinkedList b) {
+    cout << "\nAdding together..." << endl;
+    
+    return false;   
+}
+
 // Destructor de-allocates memory used by the list.
 LinkedList::~LinkedList()
 {
