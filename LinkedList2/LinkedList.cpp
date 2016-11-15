@@ -37,7 +37,8 @@ bool LinkedList::insertNode( node * newNode, int position )
     {
         head -> next = newNode;
         listLength++;
-        cout << "Success: added '" << newNode -> song << "' to position " << position << ".\n";
+        //cout << "Success: added '" << newNode -> song << "' to position " << position << ".\n";
+        cout << "Success: added '" << newNode -> number << "' to position " << position << ".\n";
         cout << "listLength = " << listLength << endl;
         return true;
     }
@@ -51,7 +52,8 @@ bool LinkedList::insertNode( node * newNode, int position )
             p -> next = newNode;
             newNode -> next = q;
             listLength++;
-            cout << "Success: added '" << newNode -> song << "' to position " << position << ".\n";
+            //cout << "Success: added '" << newNode -> song << "' to position " << position << ".\n";
+            cout << "Success: added '" << newNode -> number << "' to position " << position << ".\n";
             cout << "listLength = " << listLength << endl;
             return true;
         }
@@ -64,7 +66,8 @@ bool LinkedList::insertNode( node * newNode, int position )
         p -> next = newNode;
         newNode -> next = q;
         listLength++;
-        cout << "Success: added '" << newNode -> song << "' to position " << position << ".\n";
+        //cout << "Success: added '" << newNode -> song << "' to position " << position << ".\n";
+        cout << "Success: added '" << newNode -> number << "' to position " << position << ".\n";
         cout << "listLength = " << listLength << endl;
         return true;
     }
@@ -131,6 +134,31 @@ void LinkedList::printList()
         q = p -> next;
         count++;
     }
+}
+
+// See numbers list
+void LinkedList::printNumber(){
+    cout << "\nEntered printNumber..." << endl;
+    int count = 0;
+    node * p = head;
+    node * q = head;
+    cout << "\t number: ";
+    while (q)
+    {
+        p = q;
+        if (count != 0) {
+            if (count < listLength) {
+                cout << p->number << "->";    
+            }
+            else {
+                cout << p->number;    
+            }
+            
+        }
+        q = p -> next;
+        count++;
+    }
+    cout << "\n";
 }
 
 // Destructor de-allocates memory used by the list.
