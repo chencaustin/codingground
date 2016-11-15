@@ -162,10 +162,46 @@ void LinkedList::printNumber(){
 }
 
 // Add together list
-bool LinkedList::addNumber(LinkedList a,LinkedList b) {
+bool LinkedList::addNumber(LinkedList a, LinkedList b, LinkedList &c) {
     cout << "\nAdding together..." << endl;
     
-    return false;   
+    int count = 0;
+    node *p = a.head;
+    node *q = b.head;
+    
+    int result;
+    int first = 0;
+    int second;
+    
+    while(p != NULL || q != NULL)
+    {
+        if(count > 0) {
+            cout << "Adding: " << p->number << " + " << q->number << " + " << first << endl;
+            result = p->number + q->number + first;
+            if(result > 9) {
+                first = result / 10 % 10;
+                second = result % 10 ;
+            } else {
+                second = result;
+            }
+            node *noderesult = new node;
+            noderesult->number = second;
+            c.insertNode(noderesult, count);
+            
+        }
+        p = p->next;
+        q = q->next;
+        count++;
+    }
+    
+    cout << "Result: ";
+    c.printNumber();
+    
+    //cout << "HERE: " << endl;
+    //cout << 18 / 10 % 10 << endl; // Gives 1
+    //cout << 18 % 10 << endl;      // Gives 8
+    
+    return true;   
 }
 
 // Destructor de-allocates memory used by the list.
