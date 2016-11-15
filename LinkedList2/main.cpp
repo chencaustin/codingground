@@ -20,7 +20,6 @@ int main()
         and returns the sum as a linked list.
     */
     
-    
     // STEP 1: Create some unlinked song nodes.
     node * A = new node;    A -> song = "We Are";    A -> artist = "Vertical Horizon";
     A->number = 7;
@@ -50,10 +49,18 @@ int main()
     listB.insertNode(E, 2);
     listB.insertNode(F, 3);
     
-    listA.printNumber();
-    listB.printNumber();
-    
     LinkedList listC;
+    
+    listA.printNumber(); //617
+    listB.printNumber(); //295
+    
+    listC.addNumber(listA,listB,listC); //912
+    
+    // This is the way to grab the 2nd digit
+    //cout << "HERE: " << endl;
+    //cout << 18 / 10 % 10 << endl; // Gives 1
+    //cout << 18 % 10 << endl;      // Gives 8
+    
     
     /*
     // STEP 2: Build a list of three song nodes by appending to end of list.
