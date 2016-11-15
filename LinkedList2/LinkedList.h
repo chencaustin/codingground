@@ -58,6 +58,9 @@ public:
     // See numbers list
     void printNumber();
     
+    // Add together list
+    bool addNumber(LinkedList a,LinkedList b);
+    
     // Destructor de-allocates memory used by the list.
     ~LinkedList();
 };
